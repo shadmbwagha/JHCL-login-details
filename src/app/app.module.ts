@@ -7,12 +7,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AboutComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
