@@ -29,6 +29,7 @@ export class LoginComponent {
   }
   getmethod(){
     this.result.readInfo().subscribe((data) => {
+      console.log(data);
       this.getjsonValues= data;
     })
   }
