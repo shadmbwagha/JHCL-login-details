@@ -1,0 +1,104 @@
+{
+
+    "body": {
+      "Employee": {
+        "empId": "shadrack@jitegemeeholdings.co.tz",
+        "fName": "Shadrack",
+        "sName": " ",
+        "lName": "Mbwagha",
+        "empGender": "Male",
+        "dBirth": 1684875600000,
+        "uraia": "T",
+        "rCountry": "T",
+        "rRegion": "Y",
+        "rDistrict": "g",
+        "maritalStatus": "Single",
+        "appointDate": 1684875600000,
+        "regDate": 1684909251000,
+        "designationId": "DE20230524092039",
+        "designation": "tech",
+        "dini": "o",
+        "departmentId": "D20230401234136",
+        "department": "Information Technology",
+        "company": null,
+        "enabled": true,
+        "roles": [
+          {
+            "roleId": "R20230401234100",
+            "Privileges": [
+              {
+                "privilegeId": "P20230401234120",
+                "privilegeDescription": "this is the right to only read",
+                "privilegeName": "READ"
+              },
+              {
+                "privilegeId": "P20230401234120",
+                "privilegeDescription": "this is the right to only read",
+                "privilegeName": "READ"
+              }
+            ],
+            "roleName": "USER",
+            "roleDescription": "The role can only read to the system"
+          },
+          {
+            "roleId": "R20230401234135",
+            "Privileges": [
+              {
+                "privilegeId": "P20230401234100",
+                "privilegeDescription": "this is the right to activate employee",
+                "privilegeName": "ACTIVATE_EMPLOYEE"
+              },
+              {
+                "privilegeId": "P20230401234100",
+                "privilegeDescription": "this is the right to activate employee",
+                "privilegeName": "ACTIVATE_EMPLOYEE"
+              },
+              {
+                "privilegeId": "P20230401234101",
+                "privilegeDescription": "this is the right to delete employee from system",
+                "privilegeName": "DELETE_EMPLOYEE"
+              },
+              {
+                "privilegeId": "P20230401234101",
+                "privilegeDescription": "this is the right to delete employee from system",
+                "privilegeName": "DELETE_EMPLOYEE"
+              },
+              {
+                "privilegeId": "P20230401234110",
+                "privilegeDescription": "this is the right to dactivate employee",
+                "privilegeName": "DEACTIVATE_EMPLOYEE"
+              },
+              {
+                "privilegeId": "P20230401234110",
+                "privilegeDescription": "this is the right to dactivate employee",
+                "privilegeName": "DEACTIVATE_EMPLOYEE"
+              },
+              {
+                "privilegeId": "P20230401234120",
+                "privilegeDescription": "this is the right to only read",
+                "privilegeName": "READ"
+              },
+              {
+                "privilegeId": "P20230401234120",
+                "privilegeDescription": "this is the right to only read",
+                "privilegeName": "READ"
+              },
+              {
+                "privilegeId": "P20230401234135",
+                "privilegeDescription": "this is the right to add a new employee",
+                "privilegeName": "ADD_EMPLOYEE"
+              },
+              {
+                "privilegeId": "P20230401234135",
+                "privilegeDescription": "this is the right to add a new employee",
+                "privilegeName": "ADD_EMPLOYEE"
+              }
+            ],
+            "roleName": "ADMIN",
+            "roleDescription": "This role can do all privileges"
+          }
+        ]
+      },
+      "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzaGFkcmFja0BqaXRlZ2VtZWVob2xkaW5ncy5jby50eiIsInJvbGVzIjpbIlVTRVIiLCJBRE1JTiJdLCJleHAiOjE2ODU0MjQ4MTMsImlhdCI6MTY4NTMzODQxM30.Li0T13Y02REVRyf42-ZT6KNwu9T-39QJVXkUYGjG7-8"
+    }
+  }
