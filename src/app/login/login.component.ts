@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { LoginCredentialService } from 'src/login-credential.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent {
 
   public getjsonValues: any;
   public postjsonValues: any;
-  constructor(public result: LoginCredentialService ){
+  constructor(public result: LoginCredentialService, private route: Router ){
 
   }
 
@@ -35,7 +36,16 @@ export class LoginComponent {
   }
 
   authenticate(){
-    
+    const email = this.reactiveForm.get('email').value;
+    const paswd = this.reactiveForm.get('password').value;
+
+    if(email === "a@b.com" && paswd == "123shad"){
+      console.log("value matched");
+      this.route.navigate(['/details'])
+    }
+    else{
+      console.log("credentials mismatch");
+    }
   }
   // getMethod(){
 
