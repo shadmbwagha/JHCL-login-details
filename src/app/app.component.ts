@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { LoginCredentialService } from 'src/login-credential.service';
 
 
@@ -22,8 +22,8 @@ export class AppComponent implements OnInit{
   ngOnInit(): void{
     this.getmethod();
     this.reactiveForm = new FormGroup({
-      email : new FormControl("a@b.com"),
-      password : new FormControl(null)
+      email : new FormControl(null, [Validators.required, Validators.email]),
+      password : new FormControl(null, Validators.required)
     });
 
     this.authenticate();
@@ -35,7 +35,7 @@ export class AppComponent implements OnInit{
   }
 
   authenticate(){
-    console.warn(this.reactiveForm.value)
+    console.log(this.reactiveForm.value)
   }
   // getMethod(){
 
