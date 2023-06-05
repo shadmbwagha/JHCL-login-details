@@ -35,7 +35,7 @@ export class LoginComponent {
   }
 
   authenticate(){
-    console.log(this.reactiveForm.value)
+    
   }
   // getMethod(){
 
