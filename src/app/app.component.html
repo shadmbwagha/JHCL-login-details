@@ -12,7 +12,7 @@
     <div class="container mt-5">
       <div class="row justify-content-center align-items-center">
           <div class="col-12 col-md-6" style="background-color: white;">
-            <form  class="p-4" [formGroup]="reactiveForm">
+            <form  class="p-4" [formGroup]="reactiveForm" (ngSubmit)="authenticate">
               <h1 class="text-center my-2">JHCL - Sign In</h1>
               <div class="text-center"><small>sign in to see all user details</small></div>
 
@@ -23,7 +23,7 @@
 
               <div class="form-group pt-4">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" name="email" placeholder="Password">
+                <input type="password" class="form-control" name="email" placeholder="Password" formControlName="password">
               </div>
               <div class="col d-flex justify-content-center py-4">
                 <button type="submit" class="btn btn-primary px-4 py-2">SIGN IN</button>

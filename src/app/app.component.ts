@@ -11,7 +11,7 @@ import { LoginCredentialService } from 'src/login-credential.service';
 })
 export class AppComponent implements OnInit{
   title = 'JHCL-login';
-  reactiveForm : FormGroup
+  reactiveForm : FormGroup;
 
   public getjsonValues: any;
   public postjsonValues: any;
@@ -22,15 +22,20 @@ export class AppComponent implements OnInit{
   ngOnInit(): void{
     this.getmethod();
     this.reactiveForm = new FormGroup({
-      email : new FormControl(null),
+      email : new FormControl("a@b.com"),
       password : new FormControl(null)
     });
 
+    this.authenticate();
   }
   getmethod(){
     this.result.readInfo().subscribe((data) => {
       this.getjsonValues= data;
     })
+  }
+
+  authenticate(){
+    console.warn(this.reactiveForm.value)
   }
   // getMethod(){
 
