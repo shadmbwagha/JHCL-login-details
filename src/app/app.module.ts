@@ -7,10 +7,38 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { Route, RouterModule, Routes } from '@angular/router';
+import { UserComponent } from './user/user.component';
+import { ErrorComponent } from './error/error.component';
+import { ProfileDetailsComponent } from './profile-details/profile-details.component';
 
+
+const appRoute: Routes = [
+
+  {
+    path:'',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path:'login',
+    component: LoginComponent
+  },
+  {
+    path:'details',
+    component: ProfileDetailsComponent
+  },
+  {
+    path:'**',
+    component: ErrorComponent
+  },
+]
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +46,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     NgbModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
