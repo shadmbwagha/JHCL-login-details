@@ -8,14 +8,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProfileDetailsComponent{
   profileUrl: string = 'https://www.robertbird.com/wp-content/uploads/2021/07/barry-o-donnell-profile-image-500x500-min.jpg';
-  public empId: string;
+  empId: any;
   constructor(private route: ActivatedRoute){
 
   }
 
   ngOnInit(){
-    this.route.params.subscribe(paramsId => {
+    this.route.params.subscribe((paramsId) => {
       this.empId = paramsId['empId'];
     });
+
+    //this.empId =this.route.snapshot.paramMap.get('empId');
   }
 }

@@ -41,7 +41,7 @@ export class LoginComponent {
 
     if(email === (this.getjsonValues.Employee.empId) && paswd == (this.getjsonValues.Employee.lName)){
       console.log("value matched");
-      this.route.navigate(['/details/:empId='+ this.getjsonValues.Employee.empId])
+      this.route.navigate(['/details', this.getjsonValues.Employee.empId])
     }
     else{
       console.log("credentials mismatch");
