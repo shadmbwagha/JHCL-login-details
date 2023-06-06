@@ -26,7 +26,7 @@ const appRoute: Routes = [
     component: LoginComponent
   },
   {
-    path:'details',
+    path:'details/:empId',
     component: ProfileDetailsComponent
   },
   {

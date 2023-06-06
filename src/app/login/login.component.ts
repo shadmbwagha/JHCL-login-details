@@ -39,9 +39,9 @@ export class LoginComponent {
     const email = this.reactiveForm.get('email').value;
     const paswd = this.reactiveForm.get('password').value;
 
-    if(email === "a@b.com" && paswd == "123shad"){
+    if(email === (this.getjsonValues.Employee.empId) && paswd == (this.getjsonValues.Employee.lName)){
       console.log("value matched");
-      this.route.navigate(['/details'])
+      this.route.navigate(['/details/:empId='+ this.getjsonValues.Employee.empId])
     }
     else{
       console.log("credentials mismatch");

@@ -15,6 +15,6 @@ export class LoginCredentialService {
    }
 
    readInfo(){
-    return this.http.post('http://41.59.228.84:8081/api/login', this.body)
+    return this.http.get('http://localhost:3000/body')
    }
 }
