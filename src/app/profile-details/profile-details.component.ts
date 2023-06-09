@@ -12,6 +12,8 @@ export class ProfileDetailsComponent{
   constructor(private route: ActivatedRoute){
 
   }
+  
+
 
   ngOnInit(){
     this.route.params.subscribe((paramsId) => {
