@@ -12,7 +12,6 @@ import { Route, RouterModule, Routes } from '@angular/router';
 
 import { ErrorComponent } from './error/error.component';
 import { ProfileDetailsComponent } from './profile-details/profile-details.component';
-import { ProcurementComponent } from './procurement/procurement.component';
 
 
 const appRoute: Routes = [
@@ -34,17 +33,12 @@ const appRoute: Routes = [
     path:'**',
     component: ErrorComponent
   },
-  {
-    path:'/procurement',
-    component:ProcurementComponent
-  }
 ]
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ErrorComponent,
-    ProcurementComponent
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
