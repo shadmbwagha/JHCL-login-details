@@ -1,3 +1,79 @@
+<!-- <div style="">
+  <li *ngFor="let procureservice of getProcurementService.body" class="fw-bold">
+    {{procureservice.procureTypeName}}
+  </li>
+</div> -->
+<div class="container-fluid">
+  <div class="row flex-nowrap">
 
-<p>procurement works!</p>
+    <div class="bg-light col-auto col-md-3 min-vh-100 d-flex flex-column justify-content-between">
+      <div class="bg-light p-2">
+        <a href="" class="d-flex mt-1 align-items-center text-decoration-none">
+          <span class="fs-4 d-none d-sm-inline">JHCL </span>
+        </a>
+        <nav class="nav nav-pills flex-column mt-4">
+          <li class="nav-item py-2 p-sm-0">
+            <a class="nav-link " href="#">
+              <i class="fs-5 fa fa-gauge"></i><span class="fs-4 d-none d-sm-inline">Dashboard</span>
+            </a>
+          </li>
 
+          <li class="nav-item py-2 p-sm-0">
+            <a class="nav-link " href="#">
+              <i class="fs-5 fa fa-house"></i><span class="fs-4 d-none d-sm-inline">Get</span>
+            </a>
+          </li>
+          <li class="nav-item py-2 p-sm-0">
+            <a class="nav-link  " href="#">
+              <i class="fs-5 fa fa-gears"></i><span class="fs-4 d-none d-sm-inline">Send</span>
+            </a>
+          </li>
+        </nav>
+      </div>
+      <div class="dropdown open p-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <i class="fs-5 fa fa-user"></i><span class="fs-5 d-none d-sm-inline">shad mbwagha</span>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="triggerId">
+          <button class="dropdown-item" href="#">Action</button>
+          <button class="dropdown-item disabled" href="#">Disabled action</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-3">
+      <div class="row">
+        <div class="card col-8 col-md-3 m-2" *ngFor="let procureservice of getProcurementService.body">
+          <div class="card-body align-items-center">
+            <h2 class="text-center text-primary">{{procureservice.procureTypeName}}</h2>
+            <p class="pt-1">id: {{procureservice.procureTypeId}}</p>
+
+            <p>created by: <span class="fw-bold">{{procureservice.regstrar.regstrarName}}</span></p>
+
+          </div>
+          <div class="card-footer text-end">
+            <p>created on: <span class="fw-bold">{{procureservice.registeredDate | date}}</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="my-5"></div>
+      <div class="d-md-flex justify-content-center">
+        <div class="col-8 col-md-4 pt-2 " style="background-color: white;">
+          <form [formGroup]="sendProcurementServiceForm" (ngSubmit)="sendProcurementMethod()">
+            <h1 class="text-center pt-1">Send Procurement Service</h1>
+            <div class="form-group p-3">
+              <input type="email" class="form-control px-2" formControlName="service" aria-describedby="emailHelp"
+                placeholder="service 2">
+            </div>
+            <div class="col d-flex justify-content-center py-4">
+              <button type="submit" class="btn btn-primary px-4 py-2"> SEND </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
