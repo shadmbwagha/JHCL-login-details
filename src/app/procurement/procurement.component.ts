@@ -36,6 +36,8 @@ export class ProcurementComponent {
   sendProcurementMethod(){
     const service = this.sendProcurementServiceForm.get('service').value;
     this.result.sendProcurements(service).subscribe();
+    alert("service successful saved, reload the page")
+    this.sendProcurementServiceForm.get('service').value(null)
   }
 
 }
