@@ -9,7 +9,7 @@ export class ProcurementService {
   constructor(private http: HttpClient) { }
 
   getProcurements(){
-    const headers = new HttpHeaders({ 'Authorization': 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzaGFkcmFja0BqaXRlZ2VtZWVob2xkaW5ncy5jby50eiIsInJvbGVzIjpbIlVTRVIiLCJBRE1JTiJdLCJleHAiOjE2ODcxNzExMzMsImlhdCI6MTY4NzA4NDczM30.tlXNwvbJIV91rb0rxi0nlYcxVikTgTILafxZfB8yo4g' })
+    const headers = new HttpHeaders({ 'Authorization': 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzaGFkcmFja0BqaXRlZ2VtZWVob2xkaW5ncy5jby50eiIsInJvbGVzIjpbIkFETUlOIl0sImV4cCI6MTY5MjY4MzA5MiwiaWF0IjoxNjkyNTk2NjkyfQ.HrX4aobsH6JT809Hi3LAq2C5BQR13wNEGGfktNqTP7s' })
     return this.http.get('http://41.59.228.84:8081/api/procureTypes')
   }
 
